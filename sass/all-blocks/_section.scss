@@ -1,0 +1,72 @@
+.section-connection {
+  margin-top: 88px;
+}
+
+.connection {
+  border-radius: 90px;
+  background: radial-gradient(
+    2900.76% 50.13% at 50% 53.89%,
+    rgba(58, 52, 86, 0.95) 0%,
+    #211e2e 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+  @include center;
+  justify-content: center;
+  @include teblet-mobile(){
+    flex-direction: column
+  }
+  
+}
+.connection-card {
+    @include center;
+    padding: 53px;
+    column-gap: 10px;
+    @include desktop(){
+        flex-direction: column;
+        row-gap: 10px;
+        text-align: center;
+    }
+    
+}
+
+.location {
+  max-width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.connection-card-right {
+
+  .connection-card-right-tittle {
+    color: $text-color;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 10px;
+    @include desktop(){
+        display: none;
+    }
+    @include teblet-mobile(){
+        display: block;
+      }
+  }
+  .connection-card-right-text {
+    color: $text-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include desktop(){
+        padding-top: 10px;
+    }
+  }
+}
+
+.hr{
+    width: 2px;
+    height: 70px;
+    background-color: $text-color;
+    @include teblet-mobile(){
+        display:none;
+      }
+}

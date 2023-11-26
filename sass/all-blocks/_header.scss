@@ -1,0 +1,179 @@
+.nav-hero {
+  padding: 40px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $body-bg;
+  z-index: 999;
+}
+.hydra {
+  @include center;
+  column-gap: 250px;
+  &-left {
+    max-width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .hydra-input {
+    display: none;
+  }
+}
+
+.hydra-menu {
+  @include center;
+  justify-content: space-between;
+  width: 100%;
+  .menu-ul {
+    @include center;
+    column-gap: 42px;
+  }
+  .ul-item {
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .btn-hydra {
+    color: #343045;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 16px 34px;
+    background-color: $btn-bg;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+}
+.menu-img {
+  display: none;
+}
+
+@include desktop-tablet() {
+  .hydra {
+    column-gap: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hydra-menu {
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    top: 0px;
+    right: -100%;
+    max-width: 250px;
+    z-index: 10;
+    transition: 0.5s;
+    background-color: #242638;
+  }
+  .hydra-input:checked ~ .hydra-menu {
+    right: 0;
+  }
+  .menu-ul {
+    flex-direction: column;
+    row-gap: 32px;
+    padding-bottom: 48px;
+  }
+  .menu-img {
+    display: block;
+  }
+
+  .menu-img-btn {
+    position: fixed;
+    z-index: 12;
+  }
+}
+
+.navinfo {
+  margin-top: 200px;
+}
+
+.hydra-info {
+  @include center;
+  justify-content: space-between;
+  @include desktop-respons() {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.hydra-info-left {
+  @include desktop-respons() {
+    text-align: center;
+    row-gap: 36px;
+  }
+}
+.hydra-left-img {
+  max-width: 524px;
+  height: 455px;
+  object-fit: cover;
+  display: none;
+  @include desktop-respons() {
+    display: block;
+    padding-bottom: 40px;
+    height: 400px;
+  }
+  @include mobile-respons() {
+    height: 300px;
+  }
+  @include mobile() {
+    height: 250px;
+  }
+}
+.hydra-info-tiitle {
+  max-width: 470px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 38px;
+  color: $text-color;
+  @include mobile() {
+    .hydra-info-tiitle {
+      text-align: center;
+      max-width: 540px;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-bottom: 38px;
+      color: $text-color;
+    }
+  }
+}
+.hydra-info-text {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 450px;
+  padding-bottom: 66px;
+  @include desktop-respons() {
+    display: none;
+  }
+}
+.hydra-info-btn {
+  padding: 17px 38px;
+  color: #343045;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  cursor: pointer;
+}
+
+.hydra-right-img {
+  max-width: 524px;
+  height: 455px;
+  object-fit: cover;
+  @include desktop-respons() {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+@import './fonts';
+@import './varaibles';
+@import './mixins';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'mont';
+    background-color: $body-bg;
+}
+.container{
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+@import './all-blocks/all-blocks';
